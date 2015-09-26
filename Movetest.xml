@@ -4,50 +4,24 @@
       <block type="controls_repeat" id="816" inline="true">
         <value name="TIMES">
           <block type="math_number" id="862">
-            <field name="NUM">100</field>
+            <field name="NUM">4</field>
           </block>
         </value>
         <statement name="DO">
-          <block type="controls_if" id="313" inline="false">
-            <value name="IF0">
-              <block type="sensor_object" id="322">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_right" id="541">
-                <next>
-                  <block type="movement_forward" id="405"></block>
-                </next>
-              </block>
-            </statement>
+          <block type="movement_left" id="967">
             <next>
-              <block type="controls_if" id="445" inline="false">
-                <value name="IF0">
-                  <block type="sensor_object" id="446">
-                    <field name="OBJECT">RIGHTFRONT</field>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="movement_left" id="343">
+              <block type="movement_left" id="968">
+                <next>
+                  <block type="movement_left" id="969">
                     <next>
-                      <block type="movement_forward" id="448"></block>
+                      <block type="movement_left" id="970"></block>
                     </next>
                   </block>
-                </statement>
+                </next>
               </block>
             </next>
           </block>
         </statement>
-        <next>
-          <block type="robot_delay" id="939" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="949">
-                <field name="NUM">5000</field>
-              </block>
-            </value>
-          </block>
-        </next>
       </block>
     </next>
   </block>
