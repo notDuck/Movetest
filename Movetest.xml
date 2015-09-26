@@ -1,14 +1,52 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="166" x="145" y="33">
+  <block type="movement_forward" id="166" x="-41" y="56">
     <next>
-      <block type="robot_delay" id="189" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="224">
-            <field name="NUM">4000</field>
+      <block type="controls_repeat" id="816" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="862">
+            <field name="NUM">100</field>
           </block>
         </value>
+        <statement name="DO">
+          <block type="controls_if" id="313" inline="false">
+            <value name="IF0">
+              <block type="sensor_object" id="322">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="541">
+                <next>
+                  <block type="movement_forward" id="405"></block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="445" inline="false">
+                <value name="IF0">
+                  <block type="sensor_object" id="446">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_left" id="343">
+                    <next>
+                      <block type="movement_forward" id="448"></block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
         <next>
-          <block type="movement_stop" id="281"></block>
+          <block type="robot_delay" id="939" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="949">
+                <field name="NUM">60000</field>
+              </block>
+            </value>
+          </block>
         </next>
       </block>
     </next>
