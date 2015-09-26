@@ -10,18 +10,30 @@
         <statement name="DO">
           <block type="movement_left" id="967">
             <next>
-              <block type="movement_left" id="968">
+              <block type="movement_stutter" id="1040">
                 <next>
-                  <block type="movement_left" id="969">
+                  <block type="movement_left" id="968">
                     <next>
-                      <block type="movement_left" id="970">
+                      <block type="movement_stutter" id="1041">
                         <next>
-                          <block type="robot_delay" id="979" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="1015">
-                                <field name="NUM">5000</field>
+                          <block type="movement_left" id="969">
+                            <next>
+                              <block type="movement_stutter" id="1042">
+                                <next>
+                                  <block type="movement_left" id="970">
+                                    <next>
+                                      <block type="robot_delay" id="979" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="1015">
+                                            <field name="NUM">5000</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
                               </block>
-                            </value>
+                            </next>
                           </block>
                         </next>
                       </block>
